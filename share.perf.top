@@ -1,0 +1,13 @@
+server {
+    listen 80;
+
+    # The host name to respond to
+    server_name share.perf.top;
+
+    location / {
+        # Backend nodejs server
+        #proxy_pass          http://45.63.123.84:8000/;
+        proxy_pass          http://127.0.0.1:8081/;
+        #proxy_pass          http://baidu.com/; 
+    }
+}
